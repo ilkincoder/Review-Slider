@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 200px;
+    font-size: 40px;
+}
+
+.underline{
+    border : 2px solid #4070f4;
+    margin-left: 100px;
+    margin-right: 90px;
+}
