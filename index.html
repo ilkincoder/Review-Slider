@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="style..css">
 </head>
 <body>
@@ -17,8 +18,25 @@
             <!-- Review -->
             <article class="review">
                 <div class="img-container">
-                    <img src="./person-1.jpeg" alt="">
+                    <img src="./person-1.jpeg" id="person-img" alt="">
                 </div>
+                <h4 id="author">Sara Jones</h4>
+                <p id="job">Ux Designer</p>
+                <p id="info">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac ante nec lectus vulputate hendrerit quis in elit. Aliquam consectetur.
+                </p>
+                <!-- Prev and Next Buttons -->
+                <div class="button-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <!-- Random Button -->
+                <button class="random-btn">Surprise Me</button>
             </article>
         </section>
     </main>
