@@ -40,9 +40,6 @@ const job = document.getElementById('job');
 const info = document.getElementById('info');
 
 
-
-
-
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
@@ -50,85 +47,60 @@ const randomBtn = document.querySelector('.random-btn');
 
 // Set Starting item
 
-let currentItem = 0;
-
+let one = 0;
 
 
 // Load Initial Item 
-
 window.addEventListener('DOMContentLoaded', function(){
-    // console.log(' HELLO THere')
-  showPerson(currentItem);
-
+    show(one);
 })
 
 
 // Show person based on item
+function show(person){
 
-function showPerson (person){
-    const item = reviews[person];
+  let hex = reviews[person];
 
-    img.src = item.img;
+  img.src = hex.img;
+  author.textContent = hex.name;
+  job.textContent = hex.job;
+  info.textContent = hex.text;
 
-    author.textContent = item.name
-
-    job.textContent = item.job;
-
-    info.textContent = item.text;
 }
 
 
+
 //  Show next person 
-
 nextBtn.addEventListener('click', function(){
-    currentItem++;
-    
-    if(currentItem > reviews.length - 1){
-        currentItem = 0;
-    }
-   
-    // Calling func for updating DOM
+  one++;
 
-    showPerson(currentItem);
+  if(one > reviews.length -1){
+    one = 0;
+  };
+  show(one);
+
 });
+
 
 //  Show prev person 
-
 prevBtn.addEventListener('click', function(){
-    currentItem--;
-    if(currentItem < 0 ){
-        currentItem = reviews.length - 1;
-    }  
-   
-    // Calling func for updating DOM
+  one--;
 
-    showPerson(currentItem);
+  if(one < 0){
+    one = reviews.length - 1;
+  }
+
+
+  show(one);
+
 });
-
-
 
 
 // Show Random person
 randomBtn.addEventListener('click', function(){
-    
-    let hex = Math.floor(Math.random() * reviews.length);
-    currentItem = hex;
 
+   one = Math.floor(Math.random() * 4);
 
-    // Calling func for updating DOM
-    showPerson(currentItem);
-})
+  show(one);
 
-// function getRandomNumber(){
-//      Math.floor(Math.random() * reviews.length);
- 
-// }
-
-
-// console.log(getRandomNumber());
-
-
-
-
-
-
+});
