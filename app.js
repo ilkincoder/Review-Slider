@@ -70,7 +70,7 @@ function show(person){
 
 
 
-//  Show next person 
+//  Show next person button
 nextBtn.addEventListener('click', function(){
   one++;
 
@@ -82,7 +82,7 @@ nextBtn.addEventListener('click', function(){
 });
 
 
-//  Show prev person 
+//  Show prev person button
 prevBtn.addEventListener('click', function(){
   one--;
 
@@ -96,7 +96,7 @@ prevBtn.addEventListener('click', function(){
 });
 
 
-// Show Random person
+// Show Random person buttton 
 randomBtn.addEventListener('click', function(){
 
    one = Math.floor(Math.random() * 4);
